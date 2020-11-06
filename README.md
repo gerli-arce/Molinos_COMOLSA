@@ -59,6 +59,53 @@ double[] dSNP=new double[C];
 // Creamos la matriz de Bonificación Familiar
 double[] bNF=new double[C];
 // Cremos la matriz de Sueldo neto
-double[] SNP=new double[C];
-        
+double[] SNP=new double[C];     
+</pre>
+
+# Creacion del bucle de repeticion para la pedida de datos de cada uno de los personales
+<p>Hacemos el pedido de datos de cada uno de los personales y los almacenamos en sus respectivas matrizes que ya fueron creadas, seguido de eso asemos los procesos para el calculo del descuento por aporte SNP, la binificación familiar si tiene familia de lo contrario su bonificación sera igual a 0, y por ultimo calculamos el sueldo neto </p>
+
+<pre>
+for (int i = 0; i < C; i++) {
+            
+            almuadilla=sc.nextLine();
+            System.out.print(CYAN+"\n\nIngrese el nombre del personal "+RESET+GREEN+"N°"+(i+1)+RESET+RED+"\n>"+RESET);
+            Mnombres[i]=sc.nextLine();
+            System.out.print(CYAN+"\nIngrese los apellidos del personal "+RESET+RED+"\""+RESET+GREEN+Mnombres[i]+RESET+RED+"\""+RESET+RED+"\n>"+RESET);
+            Mapellidos[i]=sc.nextLine();
+           
+            System.out.print(CYAN+"\nIngrese el estado civil del personal "+RESET+RED+"\""+RESET+GREEN+Mnombres[i]+" "+Mapellidos[i]+RESET+RED+"\""+RESET+PURPLE+"\n(1)"+RESET+CYAN+" Casado\n"+RESET+PURPLE+"(2) "+RESET+CYAN+"Soltero"+RESET+RED+"\n>"+RESET);
+            EC=sc.nextInt();
+            System.out.print(CYAN+"Ingrese la cantidad de horas trabajadas del personal "+RESET+RED+"\""+RESET+GREEN+Mnombres[i]+" "+Mapellidos[i]+RESET+RED+"\""+RESET+RED+"\n>"+RESET);
+            HT[i]=sc.nextDouble();
+            System.out.println("-----------------------------------------------------");
+            System.out.println("-----------------------------------------------------");
+
+             // Calculamos el sueldo bruto
+
+               SueldoBruto=HT[i]*ValorHora;
+                    // Agregamos el sueldo bruto a la matris
+               SB[i]=SueldoBruto;
+
+              // Aplicasion del descuento SNP
+              DSNP= SueldoBruto*0.13;
+                    //Almacenamos el desuento del SNP
+             dSNP[i]=DSNP;
+                
+                //Bonificasion familiar
+
+                 BNF = SueldoBruto*0.07;
+
+                    //Almacenamos la bonificación familiar 
+                    if (EC==1){
+                        bNF[i]=BNF;
+                        BNFT=BNF;
+                    }else if(EC==2){
+                        bNF[i]=0;
+                        BNFT=0;
+                    }     
+                //Calculamos el sueldo neto
+                   STT=(SueldoBruto - DSNP)+BNFT;
+                   SNP[i]=STT;    
+        }
 </pre>
