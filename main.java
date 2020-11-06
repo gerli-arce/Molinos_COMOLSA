@@ -14,7 +14,7 @@ public class TrabajoFinalConsolaDeComados {
         int EC=0;// creacion de la variable de estado civil
         double ValorHora=0,SueldoBruto=0,DSNP=0,BNF=0,BNFT=0,STT=0;
         // Creamos la almuadilla para ebital el salto de linea
-        String almuadilla="";
+        String almohadilla="";
         
         ///decramos colores 
         String GREEN = "\u001B[32m",BLUE = "\u001B[34m",RESET = "\u001B[0m",CYAN = "\u001B[36m",RED = "\u001B[31m",PURPLE = "\u001B[35m",YELLOW = "\u001B[33m";
@@ -51,7 +51,7 @@ public class TrabajoFinalConsolaDeComados {
         // ingreso de datos
         for (int i = 0; i < C; i++) {
             
-            almuadilla=sc.nextLine();
+            almohadilla=sc.nextLine();
             System.out.print(CYAN+"\n\nIngrese el nombre del personal "+RESET+GREEN+"N°"+(i+1)+RESET+RED+"\n>"+RESET);
             Mnombres[i]=sc.nextLine();
             System.out.print(CYAN+"\nIngrese los apellidos del personal "+RESET+RED+"\""+RESET+GREEN+Mnombres[i]+RESET+RED+"\""+RESET+RED+"\n>"+RESET);

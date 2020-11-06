@@ -7,13 +7,13 @@ import java.util.Scanner;
 </pre>
 
 # Desclaramos Variables
-<p>Decalaramos las variables para almacenar los nombres, apellidos, estado civil, una variable C donde almacenaremos la cantidad de personales a reguistrar, una variavle EC donde se almacenará la opcion de soltero o casado ya sea (1) Casado (2) Soltero, creamos la variable para almacenar el precio por hora trabajada, para almacenar el sueldo bruto, del descuento por el descuento por aporte del SNP, la bonificasion familiar, el total de la bonificasion familiar, y para almacenar el sueldo neto ya para terminar una almoadilla para evitar el salto de linea que ya vendremos explicando. </p>
+<p>Decalaramos las variables para almacenar los nombres, apellidos, estado civil, una variable C donde almacenaremos la cantidad de personales a registrar, una variable EC donde se almacenará la opcion de soltero o casado ya sea (1) Casado (2) Soltero, creamos la variable para almacenar el precio por hora trabajada, para almacenar el sueldo bruto, del descuento por el descuento por aporte del SNP, la bonificación familiar, el total de la bonificación familiar, y para almacenar el sueldo neto ya para terminar una almohadilla para evitar el salto de linea que ya vendremos explicando. </p>
 <pre>
 String Apellidos="",Nombre="",EsctadoCivil="";
 int C=0;
 int EC=0;
 double ValorHora=0,SueldoBruto=0,DSNP=0,BNF=0,BNFT=0,STT=0;
-String almuadilla="";
+String almohadilla="";
 </pre>
 
 # Desclaramos variables para el almacenaminto de los colores con los cuales trabajaremos
@@ -25,7 +25,7 @@ String RED = "\u001B[31m",PURPLE = "\u001B[35m",YELLOW = "\u001B[33m";
 </pre>
 
 # Creacion del titulo 
-<p>Cremos un titulo asiendo uso de secuencias de escape y colores</p>
+<p>Creamos un titulo asiendo uso de secuencias de escape y colores</p>
 <pre>
 System.out.println(RED+"\n\n\t\t================================================="+RESET);
 System.out.println(RED+"\t\t================================================="+RESET);
@@ -43,7 +43,7 @@ System.out.print(CYAN+"\n\nIngrese  el precio por hora en S/."+RESET+RED+"\n>"+R
 ValorHora=sc.nextDouble();
 </pre>
 
-# Crecion de las matrizes
+# Creacion de las matrizes
 <p>Con las matrizes donde almacenaremos los nombres, apellidos, horas trabajadas, sueldo bruto, descuento SNP,bonificación familiar y sueldo bruto de cada uno de los personales </p>
 <pre>
  // Creamos la matriz de nombres
@@ -68,7 +68,7 @@ double[] SNP=new double[C];
 <pre>
 for (int i = 0; i < C; i++) {
             
-            almuadilla=sc.nextLine();
+            almohadilla=sc.nextLine();
             System.out.print(CYAN+"\n\nIngrese el nombre del personal "+RESET+GREEN+"N°"+(i+1)+RESET+RED+"\n>"+RESET);
             Mnombres[i]=sc.nextLine();
             System.out.print(CYAN+"\nIngrese los apellidos del personal "+RESET+RED+"\""+RESET+GREEN+Mnombres[i]+RESET+RED+"\""+RESET+RED+"\n>"+RESET);
@@ -84,10 +84,10 @@ for (int i = 0; i < C; i++) {
              // Calculamos el sueldo bruto
 
                SueldoBruto=HT[i]*ValorHora;
-                    // Agregamos el sueldo bruto a la matris
+                    // Agregamos el sueldo bruto a la matriz
                SB[i]=SueldoBruto;
 
-              // Aplicasion del descuento SNP
+              // Aplicación del descuento SNP
               DSNP= SueldoBruto*0.13;
                     //Almacenamos el desuento del SNP
              dSNP[i]=DSNP;
