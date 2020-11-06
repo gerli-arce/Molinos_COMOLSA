@@ -13,7 +13,7 @@ public class TrabajoFinalConsolaDeComados {
         int C=0;
         int EC=0;// creacion de la variable de estado civil
         double ValorHora=0,SueldoBruto=0,DSNP=0,BNF=0,BNFT=0,STT=0;
-        // Creamos la almuadilla para ebital el salto de linea
+        // Creamos la almohadilla para ebital el salto de linea
         String almohadilla="";
         
         ///decramos colores 
@@ -33,19 +33,19 @@ public class TrabajoFinalConsolaDeComados {
         System.out.print(CYAN+"\n\nIngrese  el precio por hora en S/."+RESET+RED+"\n>"+RESET);
          ValorHora=sc.nextDouble();
         
-        // Creamos la matris de nombres
+        // Creamos la matriz de nombres
         String [] Mnombres=new String[C];
-        // Cremos la matris de apellidos
+        // Cremos la matriz de apellidos
         String[] Mapellidos=new String[C];
-        // Creamos la matris de horas trabajadas
+        // Creamos la matriz de horas trabajadas
         double []HT=new double[C];
-        //Creamos la matris de Sueldo Bruto
+        //Creamos la matriz de Sueldo Bruto
         double [] SB=new double[C];
-        // Creamos la matris de descunto de SNP
+        // Creamos la matriz de descuento de SNP
         double[] dSNP=new double[C];
-        //Creamos la matris de Bonificasion Familiar
+        //Creamos la matriz de Bonificación Familiar
         double[] bNF=new double[C];
-        //Cremos la matris de Sueldo neto
+        //Cremos la matriz de Sueldo neto
         double[] SNP=new double[C];
         
         // ingreso de datos
@@ -63,29 +63,24 @@ public class TrabajoFinalConsolaDeComados {
             HT[i]=sc.nextDouble();
             System.out.println("-----------------------------------------------------");
             System.out.println("-----------------------------------------------------");
-            
-            //new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
-            
-
-             //       PROSESOS ****************************************************
 
              // Calculamos el sueldo bruto
 
                SueldoBruto=HT[i]*ValorHora;
-                    // Agregamos el sueldo bruto a la matris
+             // Agregamos el sueldo bruto a la matriz
                SB[i]=SueldoBruto;
 
               // Aplicasion del descunto SNP
               DSNP= SueldoBruto*0.13;
-                    //Almacenamos el desuento del SNP
-             dSNP[i]=DSNP;
+                    //Almacenamos el descuento del SNP
+              dSNP[i]=DSNP;
                 
-                //Bonificasion familiar
+                //Bonificación familiar
 
                  BNF = SueldoBruto*0.07;
 
                 
-                    //Almacenamos la bonificasion familiar 
+                    //Almacenamos la bonificación familiar 
                     if (EC==1){
                         bNF[i]=BNF;
                         BNFT=BNF;
