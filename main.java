@@ -141,7 +141,7 @@ public class TrabajoFinalConsolaDeComados {
         System.out.println(GREEN+"\n\n\n\t\t\tSUELDO NETO"+RESET);
         System.out.println(RED+"\t======================================================================"+RESET);
         for (int a = 0; a < C; a++) {
-            System.out.printf("\t"+PURPLE+"("+(a+1)+")"+RESET+YELLOW+Mnombres[a]+"\t\t\tBonificacion     =  S/"+SNP[a]+RESET);
+            System.out.printf("\t"+PURPLE+"("+(a+1)+")"+RESET+YELLOW+Mnombres[a]+"\t\t\tSueldo Neto     =  S/"+SNP[a]+RESET);
             System.out.println("");
         }
         System.out.println("\n\n\n");
